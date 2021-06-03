@@ -18,8 +18,8 @@ export const ChartWrapper: React.FC<ChartWrapper> = ({candles, selectedBaseSymbo
                 "data":
                     candles.length > 0 && candles.map((candle: string[]) => {
                         return {
-                            "x": dayjs.unix(+candle[0]).format('HH:mm:ss'),
-                            "y": String(((Number(candle[1]) + Number(candle[4])) / 2).toFixed(3)) // (open price + close price) / 2
+                            "x": dayjs.unix(+candle[0]).format('HH:mm'),
+                            "y": String((Number(candle[1]) + Number(candle[4])) / 2) // (open price + close price) / 2
                         }
                     })
             }
