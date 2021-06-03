@@ -1,0 +1,78 @@
+$currencySelectItemHeight: 50px;
+
+@keyframes swap {
+  10% { transform: translateX(10px); }
+  20% { transform: translateX(-10px); }
+}
+
+.pricesWrapper {
+  text-align: center;
+  padding-top: 20vh;
+  padding-bottom: 76px;
+
+  * {
+    z-index: 1;
+  }
+
+  .currenciesSelectWrapper {
+    max-width: 50%;
+    margin: 0 auto;
+    margin-top: 3% !important;
+    border: 1px solid darkgray;
+    padding: 10px;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .swapIcon {
+      font-size: 1.9em;
+      cursor: pointer;
+      transition: .3s;
+
+      button {
+        border: none;
+        cursor: pointer;
+        background: transparent;
+      }
+
+      &:active {
+        animation: swap 1s ease-in-out;
+      }
+    }
+
+    .currencySelectItem {
+      display: flex;
+      align-items: center;
+      height: $currencySelectItemHeight;
+
+      .ant-select {
+
+        &-selector {
+          height: $currencySelectItemHeight !important;
+          display: flex;
+          align-items: center;
+        }
+        .ant-select-selection-item {
+          text-align: left;
+        }
+      }
+    }
+  }
+
+  .getInfoBtn {
+    border: none;
+    border-radius: 3px;
+    height: $currencySelectItemHeight;
+    min-width: 20%;
+    background-color: darkcyan;
+    color: antiquewhite;
+    margin-top: 2%;
+
+    &:hover {
+      background-color: #00a0a0;
+      transform: scale(1.05);
+      transition: .3s;
+    }
+  }
+}

@@ -1,26 +1,26 @@
+import {GithubOutlined} from '@ant-design/icons/lib/icons';
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import styles from "./App.module.scss"
+import {MainContainer} from "./Components/MainContainer/MainContainer";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+export const App = () => {
+    return <div className={styles.appWrapper}>
+        <header className={styles.header}>
+            <div className={styles.naming}>
+                <h1>Crypto Tracker</h1>
+            </div>
+            <div className={styles.contact}>
+                <a href="https://github.com/MDemx/crypto-tracker"><GithubOutlined/></a>
+            </div>
+        </header>
+        <div className={styles.body}>
+            <MainContainer/>
+        </div>
+        <footer className={styles.footer}>
+            <div className={styles.footerContent}>
+                <p className={styles.footerText}>Enjoy it! 🙃</p>
+                <p className={styles.footerReference}>Crypto Tracker created by <a target={'_blank'} href="https://github.com/MDemx">MDemx</a>👨‍💻</p>
+            </div>
+        </footer>
     </div>
-  );
 }
-
-export default App;

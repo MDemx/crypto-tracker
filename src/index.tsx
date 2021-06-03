@@ -1,14 +1,29 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
+import {App} from './App';
 import reportWebVitals from './reportWebVitals';
+import {ApolloClient, ApolloProvider, InMemoryCache} from "@apollo/client";
+import 'antd/dist/antd.css';
+import 'react-notifications-component/dist/theme.css'
+import ReactNotification from 'react-notifications-component'
+
+const client = new ApolloClient({
+    uri: "https://api.blocktap.io/graphql",
+    cache: new InMemoryCache(),
+    /*headers: {
+        Authorization: `Bearer ${process.env.API_KEY}`
+    }*/
+})
 
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
+    <ApolloProvider client={client}>
+        <React.StrictMode>
+            <ReactNotification />
+            <App/>
+        </React.StrictMode>
+    </ApolloProvider>,
+    document.getElementById('root')
 );
 
 // If you want to start measuring performance in your app, pass a function

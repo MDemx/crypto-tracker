@@ -1,0 +1,77 @@
+$headerHeight: 10vh;
+$footerHeight: 10vh;
+
+.appWrapper {
+    text-align: center;
+
+    .header {
+        z-index: 9;
+        min-width: 100vw;
+        height: $headerHeight;
+        background: url("https://i.pinimg.com/originals/1a/c1/dc/1ac1dce37028755daed912c72e12133d.jpg") no-repeat;
+        background-size: cover;
+        position: fixed;
+        -webkit-box-shadow: 0px 13px 7px 0px rgba(34, 60, 80, 0.2);
+        -moz-box-shadow: 0px 13px 7px 0px rgba(34, 60, 80, 0.2);
+        box-shadow: 0px 13px 7px 0px rgba(34, 60, 80, 0.2);
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 30px;
+
+        * {
+            color: white;
+        }
+
+        .naming {
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+
+            h1 {
+                font-size: 1.5em;
+            }
+        }
+
+        .contact {
+            span {
+                font-size: 1.5em;
+            }
+        }
+    }
+
+    .body {
+        background-color: #ececec;
+        height: auto;
+    }
+
+    .footer {
+        height: $footerHeight;
+        background-color: black;
+        padding: 1vh 0;
+
+        .footerContent {
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            min-width: 50%;
+            margin: 0 auto;
+            height: 100%;
+
+            p {
+                font-size: 1.1em;
+            }
+
+            p.footerReference {
+                a {
+                    color: #00a0a0;
+                }
+            }
+        }
+
+        * {
+            color: white;
+        }
+    }
+}
