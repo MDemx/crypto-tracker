@@ -25,6 +25,17 @@ $currencySelectItemHeight: 50px;
     align-items: center;
     justify-content: space-between;
 
+    @media (max-width: 950px) {
+      max-width: 90%;
+    }
+    @media (max-width: 520px) {
+      display: block;
+
+      .currencySelectItem {
+        justify-content: center;
+      }
+    } 
+
     .swapIcon {
       font-size: 1.9em;
       cursor: pointer;
