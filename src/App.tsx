@@ -10,7 +10,7 @@ export const App = () => {
                 <h1>Crypto Tracker</h1>
             </div>
             <div className={styles.contact}>
-                <a href="https://github.com/MDemx/crypto-tracker"><GithubOutlined/></a>
+                <a href="https://github.com/MDemx/crypto-tracker" target={'_blank'}><GithubOutlined/></a>
             </div>
         </header>
         <div className={styles.body}>
