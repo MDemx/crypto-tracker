@@ -10,10 +10,7 @@ import ReactNotification from 'react-notifications-component'
 
 const client = new ApolloClient({
     uri: "https://api.blocktap.io/graphql",
-    cache: new InMemoryCache(),
-    /*headers: {
-        Authorization: `Bearer ${process.env.API_KEY}`
-    }*/
+    cache: new InMemoryCache()
 })
 
 ReactDOM.render(
