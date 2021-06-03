@@ -1,3 +1,7 @@
+## Testing
+For some reason only for `BTC/BUSD` pair there is price data.
+So if you want view full functioanlity choose `BTC/BUSD` pair.
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
